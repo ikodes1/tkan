@@ -19,25 +19,25 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-main-menu">
-              <li class="active">
+              <li {% if page.menu == 'index' %} class='active' {% endif %} >
                 <a href="index.html">Главная</a>
               </li>
-              <li>
+              <li {% if page.menu == 'company' %} class='active' {% endif %} >
                 <a href="company.html">О компании</a>
               </li>
-              <li class="dropdown">
-                <a href="tkani.html#byaz" class="dropdown-toggle" data-toggle="dropdown">Ассортимент технических тканей</a>
+              <li class="dropdown {% if page.menu == 'tkani' %} active{% endif %}" >
+                <a href="tkani.html" class="dropdown-toggle" data-toggle="dropdown" {% if page.menu == 'tkani' %} class='active' {% endif %} >Ассортимент технических тканей</a>
                 <ul class="dropdown-menu">
-                  <li><a href="tkani.html#byaz">Бязь</a></li>
                   <li><a href="tkani.html#brezent">Брезент</a></li>
+                  <li><a href="tkani.html#byaz">Бязь</a></li>                  
                   <li><a href="tkani.html#vafelnoe-polotno">Вафельное полотно</a></li>
                   <li><a href="tkani.html#sitec">Cитец</a></li>
                 </ul>
               </li>
-              <li>
+              <li {% if page.menu == 'dostavka' %} class='active' {% endif %} >
                 <a href="dostavka.html">Доставка</a>
               </li>
-              <li>
+              <li {% if page.menu == 'contacts' %} class='active' {% endif %} >
                 <a href="contacts.html">Контакты</a>
               </li>
             </ul>
